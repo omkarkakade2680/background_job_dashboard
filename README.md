@@ -1,24 +1,49 @@
-# README
+# Background Job Dashboard + react
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 8 + React + PostgreSQL + esbuild setup.
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+- Ruby 3.3.4 (rbenv recommended)
+- Rails 8.1.1
+- PostgreSQL 15
+- Node >= 18
+- Yarn
+- Foreman (`gem install foreman`)
 
-* System dependencies
+Check versions:
 
-* Configuration
+```bash
+ruby -v
+rails -v
+node -v
+yarn -v
+foreman -v
+psql --version
 
-* Database creation
 
-* Database initialization
+Setup
 
-* How to run the test suite
+Clone the repository:
 
-* Services (job queues, cache servers, search engines, etc.)
+git clone https://github.com/omkar/background_job_dashboard.git
+cd background_job_dashboard
 
-* Deployment instructions
 
-* ...
+Install dependencies:
+
+bundle install
+yarn install
+
+
+Set up the database:
+
+rails db:create
+rails db:migrate
+
+
+Running the App
+
+Start Rails + React dev server:
+
+./bin/dev
